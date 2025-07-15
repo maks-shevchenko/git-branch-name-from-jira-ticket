@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(function (request) {
     ).innerText;
     const ticketNumber = request.textToCopy;
     const prefix = "git checkout -b ";
-    const branchName = `${prefix}${ticketNumber}/${slugify(ticketTitle)}`;
+    const branchName = `${prefix}${ticketNumber}//${slugify(ticketTitle)}`;
 
     document.body.focus();
 
