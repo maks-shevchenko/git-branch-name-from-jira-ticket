@@ -15,8 +15,8 @@ chrome.runtime.onMessage.addListener(function (request) {
       '[data-testid="issue.views.issue-base.foundation.summary.heading"]'
     ).innerText;
     const ticketNumber = request.textToCopy;
-    const prefix = "git checkout -b feat/dev/";
-    const branchName = `${prefix}${ticketNumber}-${slugify(ticketTitle)}`;
+    const prefix = "git checkout -b ";
+    const branchName = `${prefix}${ticketNumber}/${slugify(ticketTitle)}`;
 
     document.body.focus();
 
